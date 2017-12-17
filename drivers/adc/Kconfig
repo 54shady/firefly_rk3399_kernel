@@ -1,0 +1,20 @@
+#
+# ADC subsystem configuration
+#
+
+menuconfig ADC
+	bool "ADC support"
+        #depends on PLAT_RK
+	default y
+if ADC
+
+#source drivers/adc/plat/Kconfig
+
+config ADC_FIREFLY
+        tristate "Firefly ADC Demo support"
+        default y
+        help
+          Sample code of ADC .
+
+
+endif # ADC
